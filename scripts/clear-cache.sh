@@ -21,12 +21,6 @@ rm -rf "$PROJECT_ROOT/client/node_modules/.vite" 2>/dev/null || true
 echo "    Removing build output..."
 rm -rf "$PROJECT_ROOT/client/dist"
 
-# ── Old project artifacts ──
-if [ -d "$PROJECT_ROOT/fullstack_template" ]; then
-    echo "    Removing old fullstack_template/ directory..."
-    rm -rf "$PROJECT_ROOT/fullstack_template"
-fi
-
 echo ""
 echo "==> All caches cleared."
 echo "    Run the following to reinstall:"
