@@ -1,28 +1,24 @@
-const webpack = require('webpack');
-const config = {
-    entry:  __dirname + '/js/index.jsx',
+const path = require('path');
+
+module.exports = {
+    entry: path.resolve(__dirname, 'js/index.jsx'),
     output: {
-        path: __dirname + '/dist',
+        path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
+        clean: true,
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.css']
+        extensions: ['.js', '.jsx'],
     },
-	module: {
-		rules: [
-			{
-				test: /\.jsx?/,
-				exclude: /node_modules/,
-				use: [
-					{
-						loader: 'babel-loader',
-						options: {
-							presets: ['react']
-						}
-					}
-				]
-			}
-		]
-	}
+    module: {
+        rules: [
+            {
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                },
+            },
+        ],
+    },
 };
-module.exports = config;

@@ -1,0 +1,9 @@
+{
+  "name": "fullstack-web-app",
+  "private": true,
+  "scripts": {
+    "start": "./scripts/start.sh",
+    "stop": "./scripts/kill-ports.sh",
+    "clean": "./scripts/clear-cache.sh"
+  }
+}
