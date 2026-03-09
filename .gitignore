@@ -18,6 +18,7 @@ yarn-error.log*
 
 # Build output
 client/dist/
+*.tsbuildinfo
 
 # IDE
 .vscode/
